@@ -1,0 +1,13 @@
+{
+  "name": "01-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server \"start\" --server \"start/**/*\"",
+    "end": "browser-sync start --server \"end\" --files \"end/**/*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
