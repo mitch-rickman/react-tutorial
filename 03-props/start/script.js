@@ -9,9 +9,6 @@ function HelloWorld() {
         </h1>
     );
 }
-// react elements
-var reactChildElement = React.createElement('em', null, 'Hello');
-var reactElement = React.createElement('h1', null, [reactChildElement, ', world']);
 
 // render a react element to a specified dom node
 ReactDOM.render(<HelloWorld />, htmlNode);

@@ -2,16 +2,13 @@
 var htmlNode = document.getElementById('root');
 
 
-function HelloWorld() {
+function HelloWorld(props) {
     return (
         <h1>
-            <em>Hello</em>, world
+            <em>Hello</em>, {props.name}
         </h1>
     );
 }
-// react elements
-var reactChildElement = React.createElement('em', null, 'Hello');
-var reactElement = React.createElement('h1', null, [reactChildElement, ', world']);
 
 // render a react element to a specified dom node
 ReactDOM.render(<HelloWorld />, htmlNode);

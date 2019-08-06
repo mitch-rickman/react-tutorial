@@ -1,5 +1,5 @@
 # Getting started
-Make sure you have a terminal scoped to the `01-javascript` dierectory and then run `npm install`. This will walk through the package.json file and install all of the dependencies for this tutorial.
+Make sure you have a terminal scoped to the `02-jsx` dierectory and then run `npm install`. This will walk through the package.json file and install all of the dependencies for this tutorial.
 
 ## Running the starting point
 To view the starting point code in a browser you can run the command `npm run start` or `npm start`. This should automatically open a browser window with the code located in the `/start` directory.
