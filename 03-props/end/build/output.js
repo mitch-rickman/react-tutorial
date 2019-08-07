@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// where to place the react components after the code runs\nvar htmlNode = document.getElementById('root');\n\nfunction HelloWorld() {\n  return React.createElement(\"h1\", null, React.createElement(\"em\", null, \"Hello\"), \", world\");\n} // react elements\n\n\nvar reactChildElement = React.createElement('em', null, 'Hello');\nvar reactElement = React.createElement('h1', null, [reactChildElement, ', world']); // render a react element to a specified dom node\n\nReactDOM.render(React.createElement(HelloWorld, null), htmlNode);\n\n//# sourceURL=webpack:///./end/script.js?");
+eval("// where to place the react components after the code runs\nvar htmlNode = document.getElementById('root');\n\nfunction myAwesomeFunction() {\n  console.log('I totally came up with this function on my own.');\n}\n\nfunction HelloWorld(props) {\n  return React.createElement(\"div\", null, React.createElement(\"h1\", null, React.createElement(\"em\", null, \"Hello\"), \", \", props.name), React.createElement(\"button\", {\n    type: \"button\",\n    onClick: props.action\n  }, \"This button rules\"));\n} // render a react element to a specified dom node\n\n\nReactDOM.render(React.createElement(HelloWorld, {\n  name: \"Luigi\",\n  action: myAwesomeFunction\n}), htmlNode);\n\n//# sourceURL=webpack:///./end/script.js?");
 
 /***/ })
 

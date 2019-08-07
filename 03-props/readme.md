@@ -32,6 +32,7 @@ function HelloWorld(props) {
 
 We added props as an arugment to the HelloWorld component. Props is a javascript object that contains all props passed to the component (yes you can pass any number of props). Then we use `{props.name}` to output the prop with the key of name to the final rendered html. The `{}` allows you to run a javascript function or output a value in the JSX code.
 
+
 ## What can a prop be?
 Props can be a string, number, function, object or really anything you can pass in javascript. For example lets pass a simple function and add a button to the component that will fire the function when clicked.
 
@@ -39,5 +40,31 @@ First create a function that does somethg. Anything. For those without imaginati
 ```
 function myAwesomeFunction() {
     console.log('I totally came up with this function on my own.');
+}
+```
+
+You can pass this function as a prop to the `HelloWorld` component just like you would with a string. For example:
+```
+<HelloWorld name="Luigi" action={myAwesomeFunction}>
+```
+
+Now we can add a `<button>` element inside the `HelloWorld` component and add a click event that calls the function we just made and passed as a prop. This will look something like:
+```
+<button type="button" onClick={props.action}>This button rules</button>
+```
+
+The portion `onClick={props.action}` uses `{}` after the equals sign. This syntax allows you to pass in objects, functions and variables instead of a typical string.
+
+Please note that you are only able to have one element in the return statement of a component. The final output component for this example will look like the following. Be sure to note the new `<div>` element wrapping the title and the button:
+```
+function HelloWorld(props) {
+    return (
+        <div>
+            <h1>
+                <em>Hello</em>, {props.name}
+            </h1>
+            <button type="button" onClick={props.action}>This button rules</button>
+        </div>
+    );
 }
 ```
